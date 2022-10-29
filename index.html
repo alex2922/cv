@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <nav class="child-cen">
+        <div class="nav-item">
+            <a href="index.html" class="logo"> <img src="img/black logo.svg" alt=""> <span>HARSH SINGH</span></a>
+
+            <div class="menu" onclick="openNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fullpageNav">
+        <div class="close" onclick="closeNav()">
+            <img src="/img/close.svg" alt="">
+        </div>
+
+        <div class="links">
+            <a href="" class="active">Home</a>
+            <a href="" class="">About Me</a>
+            <a href="" class="">Projects</a>
+            <a href="" class="">Contact Me</a>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <section class="hero child-cen header finisher-header" >
+
+            <div class="wrapper child-cen">
+
+                <div class="box">
+                    <h1>HARSH SINGH</h1>
+                    <h2>
+                        DEVELOPER / DESIGNER
+                    </h2>
+                    <button class="btn">Contact Me</button>
+                </div>
+
+            </div>
+
+
+
+
+        </section>
+        <section class="page2 child-cen">
+
+            <div class="wrapper">
+                <div class="ls">
+                    <div class="box">
+                        <h2>About me</h2>
+                        <p> I am a front end developer based in India. I am also a part time Graphic Designer who has
+                            keen interest in clean and simple UI </p>
+
+                        <button class="btn"> Download Resume</button>
+                    </div>
+                </div>
+                <div class="rs"></div>
+
+            </div>
+        </section>
+        <section class="page3"></section>
+        <section class="page4"></section>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/finisher-header.es5.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new FinisherHeader({
+          "count": 100,
+          "size": {
+            "min": 2,
+            "max": 8,
+            "pulse": 0
+          },
+          "speed": {
+            "x": {
+              "min": 0,
+              "max": 0.4
+            },
+            "y": {
+              "min": 0,
+              "max": 0.6
+            }
+          },
+          "colors": {
+            "background": "#ffffff",
+            "particles": [
+              "#000000"
+            ]
+          },
+          "blending": "overlay",
+          "opacity": {
+            "center": 1,
+            "edge": 0
+          },
+          "skew": -2,
+          "shapes": [
+            "c"
+          ]
+        });
+        </script>
+    
+
+</body>
+
+</html>
