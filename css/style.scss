@@ -2,7 +2,7 @@
   --white: #ffffff;
   --accent: rgb(255, 0, 0);
   --black: #000000;
-  --quick: all 0.25s ease-out;
+  --quick: all 0.33s ease-out;
   --width: 100vw
 }
 
@@ -23,360 +23,122 @@
 // font-family: 'Audiowide', cursive;
 // font-family: 'Montserrat', sans-serif;
 
-// helper classes   -------------------------------------------------------
+// mian css   -------------------------------------------------------
 
-.child-cen {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Audiowide", cursive;
-  margin-bottom: 20px;
-  font-size: 190%;
-  position: relative;
-  color: var(--black);
-}
-
-.btn {
-  padding: 8px 30px;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--white);
+body{
+  height: 100vh;
+  width: 100vw;
   background: var(--black);
-  transition: var(--quick);
-  border: 4px solid var(--black);
-  text-shadow: 0px 0px 0px var(--white);
-  &:hover {
-    background: var(--white);
-    color: var(--black);
-    text-shadow: 0px 0px 0px var(--black);
-  }
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
+ h1,h2,h3,p,a{
+  color: var(--white);
+  font-family: 'Audiowide', cursive;
+  font-weight: 100;
+ }
 
-p {
+ p{
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-  word-spacing: 5px;
-  word-wrap: break-word;
-}
+ }
 
-//  mian css starts from here -----------------------------------------------------------
 
-body {
-  height: 100vh;
-  width: 100vw;
+
+
+
+ .box_container{
+  height: 50vh;
+  width: 90vw;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  overflow: hidden;
-}
+  justify-content: space-around;
+ }
 
-.container {
-  max-width: var(--width);
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-
-  &::-webkit-scrollbar {
-    display: none;
-    /* for Chrome, Safari, and Opera */
-  }
-
-  section {
-    scroll-snap-align: start;
-    height: 100vh;
-    width: 100vw;
-  }
-}
-
-nav {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 70px;
-  z-index: 5;
- 
-
-
-  .nav-item{
-    width: var(--width);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 50px;
-    .logo{
-      display: flex;
-      align-items: center;
-      position: relative;
-      transition: var(--quick);
-      span{
-        position: absolute;
-        left: -20px;
-        color: var(--black);
-        font-weight: 500;
-        opacity: 0;  
-        transition: var(--quick); 
-        z-index: 2;     
-      }
-      img{
-        height: 35px;
-        margin-right: 10px;
-        transition: var(--quick);
-        z-index: 5;
-        border: 1px solid var(--white);
-      }
-      &:hover{
-         span {
-          left: 40px;
-          opacity: 1;
-         }
-         img{
-          height: 40px;
-         }
-      }
-    }
-
-    .mode{
-      height: 30px;
-      width: 30px ;
-      background: green;
-    }
-    .menu{
-      span{
-        height: 5px ;
-        width: 30px;
-        background: var(--black);
-        display: block;
-        border-radius: 50px;
-        transition: var(--quick);
-        &:not(:last-child){
-          margin-bottom: 5px;
-        }
-      }
-      &:hover{
-        span:nth-child(2){
-          transform: translateX(-10px);
-        }
-      }
-    }
-  }
-
-}
-
-
-
-.fullpageNav{
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--white);
-  position: absolute;
-  top: 0px;
-  right: -100%;
-  z-index: 100;
-  display: flex;
-  align-items: center;
+.box{
+  --height: 350px;
+  height:var(--height) ;
+  width:calc((var(--height)) * 3 / 4);
+  border-radius: 5px;
   transition: var(--quick);
-  opacity: 0;
-
-  .close{
-    position: absolute;
-    top: 20px;
-    right: 60px;
-    height: 20px;
-    width: 20px;
-    transition: var(--quick);
-    img{
-      height: 28px;
-      transition: var(--quick);
-    }
-    &:hover {
-      img{
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-   .links{
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    a{
-      font-family: "Audiowide", cursive;
-      color: var(--black);
-      font-size: 50px;
-      transition: var(--quick);
-
-      padding: 10px 0px ;
-      
-      width: 100%;
-
-      &:hover , a.active {
-        letter-spacing: 10px;
-        background: linear-gradient(90deg,transparent,black);
-        
-
-      }
-    }
-
-   }
-
-}
-
-@media screen and (max-width: 768px)  {
-  .fullpageNav{
-    .links{
-      a{
-        font-size: 25px;
-      }
-    }
-  }
-}
-
-//hero section
-
-.hero {
-  //display: none;
+  border: 1px solid var(--white);
+  background: var(--black);
+  overflow: hidden;
   position: relative;
- 
-  display: flex;
-  .wrapper{
-    height: 90%;
-    width: 90%;
-    position: relative;
+  transition: var(--quick);
+
+  &:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.356);
+    border: 2px solid var(--white);
+    cursor: progress;
+
+    .sub_container{
+      transform: translateX(0%);
+    }
+    .bg{
+      opacity: 1;
+      transform: rotate(90deg) translate(-50%,-50%) scale(1.8);
+       &.bg2{
+        transform: rotate(90deg) translate(-30%,-50%) scale(1.7);
+       }
+    }
+
+  }
+
+  .bg{
+    opacity: 0.1;
+    text-transform: uppercase;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: var(--quick);
+    transform: rotate(0deg) translate(-50%,-50%) scale(1);
+
+  }
+
+  .sub_container{
+    position: absolute;
+    bottom: 0px;
+    height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     justify-content: space-evenly;
+    transform: translateX(-100%);
+    transition: var(--quick);
 
-    .box{
-      margin-top: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h1{
-        font-size: 100px;
-        
-      }
-      h2{
-         letter-spacing: 15px;
-         font-size: 35px;
-      }
+    .text{
+      margin-left: 0px;
     }
   }
+
+  button{
+    padding: 10px 20px ;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    word-spacing: 3px;
+    background: var(--black);
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    color: var(--white);
+    transition: var(--quick);
   
-}
-@media screen and (max-width: 1000px)  {
-  .hero{
-    height: 100vh;
-    .wrapper{
-      .box{
-        h1{
-          font-size: 50px;
-        }
-        h2{
-          letter-spacing: 10px;
-          font-size: 15px;
-       }
-      }
-      .box > *{
-        margin: 15px 0px;
-      }
+
+    &:hover{
+      color: var(--black);
+      background: var(--white);
     }
   }
-}
-@media screen and (max-width: 480px)  {
-  .hero{
-  
-    .wrapper{
-      .box{
-        h1{
-          font-size: 20px;
-        }
-        h2{
-          letter-spacing: 3px;
-          font-size: 10px;
-       }
-      }
-      
-    }
-  }
-}
 
 
-// page 2
-
-.page2 {
-  position: relative;
-
-  .wrapper {
-    height: 90%;
-    width: 90%;
-    background: white;
-    display: flex;
-    position: relative;
-    .ls {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      align-content: space-evenly;
-      padding: 0px 20px;
-
-      .box {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        
-        button {
-          margin-top: 30px;
-        }
-      }
-    }
-    .rs {
-      width: 50%;
-      height: 100%;
-    }
-  }
-}
 
 
-@media screen and (max-width: 1000px)  {
-  .page2{
-  
-    .wrapper{
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: space-evenly;
-      .ls, .rs{
-        width: 100%;
-        height: 50%;
-      }
-      .ls{
-        
-         .box{
-          align-items: center;
-          p{
-            letter-spacing: 0px;
-            word-spacing: 0px;
-            text-align: center;
-            padding-right: 0px;
-            
-           }
-         }
-      }
-      
-    }
-  }
 }
