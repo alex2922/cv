@@ -59,7 +59,7 @@ body{
  }
 
 .box{
-  --height: 350px;
+  --height: 400px;
   height:var(--height) ;
   width:calc((var(--height)) * 3 / 4);
   border-radius: 5px;
@@ -72,25 +72,34 @@ body{
 
   &:hover{
     transform: translateY(-10px);
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.356);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.356);
     border: 2px solid var(--white);
-    cursor: progress;
+    cursor: pointer;
 
     .sub_container{
       transform: translateX(0%);
     }
     .bg{
       opacity: 1;
-      transform: rotate(90deg) translate(-50%,-50%) scale(1.8);
+      transform: rotate(90deg) translate(-50%,-100%) scale(1.8);
        &.bg2{
         transform: rotate(90deg) translate(-30%,-50%) scale(1.7);
        }
     }
+    .img{
+      
+      opacity:0.6;
+      transition-delay: .25s;
+      height: 150px;
+      width: 150px;
+    
 
+    }
+    
   }
 
   .bg{
-    opacity: 0.1;
+    opacity: 0.2;
     text-transform: uppercase;
     font-weight: 800;
     position: absolute;
@@ -100,6 +109,22 @@ body{
     transform: rotate(0deg) translate(-50%,-50%) scale(1);
 
   }
+  .img{
+    background: url('/img/designer.webp');
+    background-size: contain;
+    opacity: 0;
+    height: 00px;
+    width: 00px;
+    transition: var(--quick);
+    margin: 50px 0px 0px 45px;
+
+    &.img2{
+      background: url('/img/developer.webp');
+      background-size: contain;
+    }
+    
+  }
+
 
   .sub_container{
     position: absolute;
@@ -130,6 +155,7 @@ body{
     border-radius: 5px;
     color: var(--white);
     transition: var(--quick);
+    font-size: 20px;
   
 
     &:hover{
@@ -141,4 +167,27 @@ body{
 
 
 
+}
+
+
+
+@media only screen and (max-width: 900px) {
+
+  body{
+    height: auto;
+  }
+  
+  .hearoheading{
+    margin: 50px 0px;
+  }
+
+  .box_container {
+   flex-direction: column-reverse;
+   height: auto;
+  }
+
+  .box{
+    margin-bottom: 0px;
+    transform: scale(0.5);
+  }
 }
