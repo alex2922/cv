@@ -11,7 +11,9 @@
 
 function navOpen(){
     document.querySelector('#nav-list').style.display = 'block';
+    document.querySelector('#bg').style.display = 'block';
 }
 function navClose(){
     document.querySelector('#nav-list').style.display = 'none';
+    document.querySelector('#bg').style.display = 'none';
 }

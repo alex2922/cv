@@ -178,9 +178,18 @@ nav {
 
   }
 
-  .bg{
-    
-  }
+  
+}
+.bg{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: var(--black);
+  opacity: 0.4;
+  z-index: 4;
+  display: none;
 }
 
 @media only screen and (max-width: 900px) {
